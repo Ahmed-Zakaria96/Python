@@ -1,0 +1,34 @@
+{
+    "projects": [
+        {
+            "ownerID": 1,
+            "ownerName": "ahmed",
+            "projectID": 1,
+            "projName": "asdasda",
+            "projDetails": "asd",
+            "projTarget": "as",
+            "projStart": "10/12/12",
+            "projEnd": "12/12/23"
+        },
+        {
+            "ownerID": 1,
+            "ownerName": "ahmed",
+            "projectID": 2,
+            "projName": "asdasdad",
+            "projDetails": "sssssssssssss",
+            "projTarget": "29292929",
+            "projStart": "10/5/22",
+            "projEnd": "10/6/23"
+        },
+        {
+            "ownerID": 2,
+            "ownerName": "noha",
+            "projectID": 3,
+            "projName": "iti",
+            "projDetails": "iti project",
+            "projTarget": "50000",
+            "projStart": "10/5/2020",
+            "projEnd": "10/6/2020"
+        }
+    ]
+}

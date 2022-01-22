@@ -1,0 +1,32 @@
+{
+    "emails": [
+        {
+            "from": "From: ahmed",
+            "to": "To: ahmed",
+            "subject": "Subject: test",
+            "receiverName": "Hello Zika",
+            "msg": "can u hear me"
+        },
+        {
+            "From": "ahmed@gmail.com",
+            "To": "ahmed@gmail.com",
+            "Subject": "test",
+            "ReceiverName": "ahmed,",
+            "Msg": "hello"
+        },
+        {
+            "From": "test@gmail.com",
+            "To": "ahmed@gmail.com",
+            "Subject": "test",
+            "ReceiverName": "ahmed,",
+            "Msg": "hellooooooooo"
+        },
+        {
+            "From": null,
+            "To": "ahmed@gmail.com",
+            "Subject": "test",
+            "ReceiverName": "hello,",
+            "Msg": "hi"
+        }
+    ]
+}

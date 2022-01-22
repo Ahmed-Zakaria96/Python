@@ -1,0 +1,62 @@
+{
+    "offices": [
+        {
+            "Office Name": "ahmed",
+            "Office Employees": [
+                {
+                    "empID": 1,
+                    "empName": "ahmed",
+                    "empMood": "Happy :)",
+                    "empHealth": 100,
+                    "empSalary": 5000,
+                    "empMoney": 50,
+                    "empEmail": null,
+                    "empCar": null,
+                    "empDTW": 50
+                },
+                {
+                    "empID": 2,
+                    "empName": "ahmed2",
+                    "empMood": "Happy :)",
+                    "empHealth": 100,
+                    "empSalary": 50002,
+                    "empMoney": 502,
+                    "empEmail": null,
+                    "empCar": null,
+                    "empDTW": 502
+                }
+            ]
+        },
+        {
+            "Office Name": "zakaria",
+            "Office Employees": [
+                {
+                    "empID": 1,
+                    "empName": "z",
+                    "empMood": "Happy :)",
+                    "empHealth": 100,
+                    "empSalary": 5000,
+                    "empMoney": 40,
+                    "empEmail": null,
+                    "empCar": null,
+                    "empDTW": 50
+                },
+                {
+                    "empID": 2,
+                    "empName": "zz",
+                    "empMood": "Happy :)",
+                    "empHealth": 100,
+                    "empSalary": 5000,
+                    "empMoney": 50,
+                    "empEmail": null,
+                    "empCar": null,
+                    "empDTW": 50
+                }
+            ]
+        },
+        {
+            "Office Name": "ali",
+            "Office Employees": []
+        }
+    ]
+}
