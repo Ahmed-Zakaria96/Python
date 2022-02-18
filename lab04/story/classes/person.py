@@ -2,6 +2,7 @@ from Color_Console import *
 
 class Person:
 
+    # available moods
     moods = {"mood1": "Happy :)",
             "mood2": "Tired :(",
             "mood3": "Lazy -_-"}
@@ -18,23 +19,27 @@ class Person:
 
     @healthRate.setter
     def healthRate(self, hr):
-        check = Person.validNumber(hr, "Health care")
-        if check and hr <= 100:
-            self._healthRate = hr
-            return True
-        else:
-            print("Invalid health rate.")
+        try:
+            check = Person.validNumber(hr, "Health care")
+            if check and hr <= 100:
+                self._healthRate = hr
+                return True
+        except Exception as e:
+            print(e)
             return False
 
     def eat(self, meals):
-        check = Person.validNumber(meals, "Meals number")
-        if check:
-            if meals >= 3:
-                self.healthRate = 100
-            elif meals == 2:
-                self.healthRate = 75
-            elif meals == 1:
-                self.healthRate = 50
+        try:
+            check = Person.validNumber(meals, "Meals number")
+            if check:
+                if meals >= 3:
+                    self.healthRate = 100
+                elif meals == 2:
+                    self.healthRate = 75
+                elif meals == 1:
+                    self.healthRate = 50
+        except Exception as e:
+            print(e)
 
     def sleep(self, hours):
         check = Person.validNumber(hours, "Sleep hours")
@@ -47,15 +52,19 @@ class Person:
                 self.mood = self.__class__.moods['mood3']
 
     def buy(self, items):
-        check = Person.validNumber(items, "Items count")
-        if check:
-            total = items * 10
-            if total <= self.money:
-                self.money -= total
-                ctext(f"Successfully bought items, new money is {self.money}", text="green")
-
-            else:
-                ctext(f"You cant buy all of that u only got {self.money}.", text="red")
+        try:
+            check = Person.validNumber(items, "Items count")
+            if check:
+                total = items * 10
+                # if he has enough money
+                if total <= self.money:
+                    self.money -= total
+                    ctext(f"Successfully bought items, new money is {self.money}", text="green")
+                # if not enough money
+                else:
+                    ctext(f"You cant buy all of that u only got {self.money}.", text="red")
+        except Exception as e:
+            print(e)
 
     @staticmethod
     def validNumber(number, R):

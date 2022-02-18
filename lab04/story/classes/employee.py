@@ -14,7 +14,7 @@ class Employee(person.Person):
     def __str__(self):
         return f"""ID: {self.id} | Name: {self.name} | Email: {self.email} | Salary: {self.salary} | Money: {self.money}\n
         Mood: {self.mood} | Health: {self.healthRate}\n
-        DistanceToWork: {self.distanceToWork} | Car: {self.car.name if self.car else None}"""
+        DistanceToWork: {self.distanceToWork} | Car: {self.car if self.car else None}"""
 
     @property
     def salary(self):
@@ -25,7 +25,8 @@ class Employee(person.Person):
         if amount >= 1000:
             self._salary = amount
         else:
-            print("Salary must be at least 1000")
+            print("Salary must be at least 1000.\nSalary was set to 1000")
+            self._salary = 1000
 
     @property
     def email(self):
@@ -38,9 +39,10 @@ class Employee(person.Person):
     @staticmethod
     def validSalary(number):
         if isinstance(number, int):
-            if number > 1000:
+            if number >= 1000:
                 return True
         return False
+
     @staticmethod
     def validEmail(email):
         import re
@@ -52,15 +54,18 @@ class Employee(person.Person):
             print("Invalid Email")
             return False
 
+    # drive the car
     def drive(self, d, v):
         if car:
             self.distanceToWork = self.car.run(self.distanceToWork, d, v)
         else:
             print("You don't have a car bro.")
 
+    # refuel
     def refuel(self, f):
         return self.car.reFuel(f)
 
+    # send mail
     def sendEmail(self, to, subject, msg, receiverName):
         import json
         try:
@@ -85,6 +90,7 @@ class Employee(person.Person):
         except Exception as e:
             print(e)
 
+    # prepare employee data to be save in json file
     def prepareEmpData(self):
         data = {
             "empID" : self.id,

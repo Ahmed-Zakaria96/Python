@@ -6,20 +6,25 @@ import validators as v
 from Color_Console import *
 import os
 
+# add new office
 def addNewOffice():
     while True:
         name = input("Enter office name: ")
+        # check for valid office name
         check = v.checkName(name)
         if check:
             break
-
+    # note ???? emps []
     offi = office.Office(name, employees=[])
     return offi
 
+# office methods
 def switchSelection(o, s):
+    # show office emps
     if s == 1:
         o.getEmployees()
 
+    # search for and emp in the office
     elif s == 2:
         while True:
             id = input("Enter Employee id: ")
@@ -31,13 +36,13 @@ def switchSelection(o, s):
         emp = o.getEmployee(id)
         if emp:
             ctext(emp, text="green")
-        else:
-            ctext("Employee not found.", text="red")
 
+    # hire new emp
     elif s == 3:
         e = addEmployee()
         o.hire(e)
 
+    # wad3o ya limby
     elif s == 4:
         while True:
             id = input("Enter Employee id: ")
@@ -50,6 +55,7 @@ def switchSelection(o, s):
         if e:
             o.fire(id)
 
+    # check checkLateness
     elif s == 5:
         while True:
             id = input("Enter Employee id: ")
@@ -70,6 +76,7 @@ def switchSelection(o, s):
 
         o.checkLateness(e, move)
 
+    # reward
     elif s == 6:
         while True:
             id = input("Enter Employee id: ")
@@ -91,6 +98,7 @@ def switchSelection(o, s):
         else:
             ctext("Somthing wrong happened", text="red")
 
+    # deduce
     elif s == 7:
         while True:
             id = input("Enter Employee id: ")
@@ -112,6 +120,7 @@ def switchSelection(o, s):
         else:
             ctext("Somthing wrong happened", text="red")
 
+    # show emp menu
     elif s == 8:
         while True:
             id = input("Enter Employee id: ")
@@ -134,6 +143,7 @@ def switchSelection(o, s):
     elif s == 9:
         return s
 
+# add new employee
 def addEmployee():
     while True:
         id = input("Enter employee id: ")
@@ -171,6 +181,7 @@ def addEmployee():
     return e
 
 def employeeMethods(e, m):
+    # add email
     if m == 1:
         while True:
             mail = input("Enter your Email: ")
@@ -179,6 +190,7 @@ def employeeMethods(e, m):
                 e.email = mail
                 break
 
+    # add car
     elif m == 2:
         cName = input("Enter you car name: ")
         fRate = input("Enter Fuel rate: ")
@@ -187,30 +199,36 @@ def employeeMethods(e, m):
             e.car = c
             ctext("Car changed Successfully.", text="green")
 
+    # add money
     elif m == 3:
         money = input("Enter Money amout: ")
         if money.isdigit():
             e.money = int(money)
         else:
             ctext("Invalid amount.", text="red")
+
+    # send mail
     elif m == 4:
         while True:
             eTo = input("Enter Receiver email: ")
             if employee.Employee.validEmail(eTo):
                 break
+
         subj = input("Enter subject: ")
         recName = input("Enter receiver name: ")
         msg = input("Enter message: ")
         e.sendEmail(eTo, subj, msg, recName)
         ctext("MSG was sent Successfully.", text="green")
 
+    # buy items
     elif m == 5:
-        items = input("Enter amount of number of items: ")
+        items = input("Enter number of items: ")
         if items.isdigit():
             e.buy(int(items))
         else:
             ctext("Invalid number of items", text="red")
 
+    # drive the car
     elif m == 6:
         if e.car:
             while True:
@@ -227,6 +245,7 @@ def employeeMethods(e, m):
         else:
             ctext("You dont have a car set a car first.", text="red")
 
+    # refuel the car
     elif m == 7:
         if e.car:
             while True:
@@ -238,6 +257,7 @@ def employeeMethods(e, m):
         else:
             ctext("You dont have a car set a car first.", text="red")
 
+    # sleep
     elif m == 8:
         while True:
             s = input("Enter sleep hours: ")
@@ -246,6 +266,7 @@ def employeeMethods(e, m):
                 break
         e.sleep(s)
 
+    # eat
     elif m == 9:
         while True:
             ms = input("Enter number of meals: ")

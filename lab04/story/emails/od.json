@@ -8,45 +8,23 @@
                     "empName": "ahmed",
                     "empMood": "Happy :)",
                     "empHealth": 100,
-                    "empSalary": 5000,
+                    "empSalary": 1000,
                     "empMoney": 50,
                     "empEmail": null,
                     "empCar": null,
                     "empDTW": 50
-                },
-                {
-                    "empID": 2,
-                    "empName": "ahmed2",
-                    "empMood": "Happy :)",
-                    "empHealth": 100,
-                    "empSalary": 50002,
-                    "empMoney": 502,
-                    "empEmail": null,
-                    "empCar": null,
-                    "empDTW": 502
                 }
             ]
         },
         {
-            "Office Name": "zakaria",
+            "Office Name": "two",
             "Office Employees": [
                 {
                     "empID": 1,
-                    "empName": "z",
+                    "empName": "test",
                     "empMood": "Happy :)",
                     "empHealth": 100,
-                    "empSalary": 5000,
-                    "empMoney": 40,
-                    "empEmail": null,
-                    "empCar": null,
-                    "empDTW": 50
-                },
-                {
-                    "empID": 2,
-                    "empName": "zz",
-                    "empMood": "Happy :)",
-                    "empHealth": 100,
-                    "empSalary": 5000,
+                    "empSalary": 1000,
                     "empMoney": 50,
                     "empEmail": null,
                     "empCar": null,
@@ -55,7 +33,7 @@
             ]
         },
         {
-            "Office Name": "ali",
+            "Office Name": "three",
             "Office Employees": []
         }
     ]
